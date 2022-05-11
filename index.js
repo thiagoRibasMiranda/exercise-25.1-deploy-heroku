@@ -13,5 +13,5 @@ app.listen(PORT, () => {
 });
 
 function handleHelloWorldRequest(req, res) {
-  res.status(200).send(`${NEWVAR}`);
+  res.status(200).send(`${NEWVAR}, ${TEST}`);
 }
