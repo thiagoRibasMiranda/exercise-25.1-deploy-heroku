@@ -4,6 +4,7 @@ require('dotenv').config();
 const app = express();
 
 const PORT = process.env.PORT || 3001;
+const NEWVAR = process.env.NEWVAR || 'Está vivo!!!';
 
 app.get('/', handleHelloWorldRequest);
 
@@ -12,5 +13,5 @@ app.listen(PORT, () => {
 });
 
 function handleHelloWorldRequest(req, res) {
-  res.status(200).send('Está vivo!!!');
+  res.status(200).send(`${NEWVAR}`);
 }
