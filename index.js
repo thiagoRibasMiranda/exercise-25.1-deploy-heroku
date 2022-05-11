@@ -5,6 +5,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3001;
 const NEWVAR = process.env.NEWVAR || 'Está vivo!!!';
+const TEST = process.env.TEST;
 
 app.get('/', handleHelloWorldRequest);
 
