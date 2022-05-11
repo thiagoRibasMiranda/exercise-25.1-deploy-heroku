@@ -1,11 +1,14 @@
 const express = require('express');
+require('dotenv').config();
 
 const app = express();
 
+const PORT = process.env.PORT || 3001;
+
 app.get('/', handleHelloWorldRequest);
 
-app.listen(3001, () => {
-  console.log('Aplicação ouvindo na porta 3001');
+app.listen(PORT, () => {
+  console.log(`Aplicação ouvindo na porta ${PORT}`);
 });
 
 function handleHelloWorldRequest(req, res) {
